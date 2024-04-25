@@ -10,16 +10,17 @@ body {
     align-items: center;
     background-color: #E3FEF7;
     color: #003C43;
+    grid-area: encabezado;
     } 
     
 .encabezado img {
-    width: 170px;
-    margin: 20px 20px;
+    width: 150px;
+    margin: 10px 10px;
     border-radius: 5px;
 }   
 
 .encabezado-centro h1{
-    font-size: 42px;
+    font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -28,6 +29,7 @@ body {
 .menu {
     background-color: #77B0AA;
     text-align: center;
+    grid-area: menu;
     }
 
 .menu ul {
@@ -54,55 +56,37 @@ body {
 
 /*----------Estilos de las portadas--------------*/
 
-.contenedor-recetas_saladas {
+.contenedor-recetas {
     display: flex;
     padding: 10px;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
 }
 
-.contenedor-recetas_saladas div {
+.contenedor-recetas div {
     margin: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
 }
-.contenedor-recetas_saladas img {
-    height: 400px;
+
+.contenedor-recetas img {
+    height: 250px;
     border-radius: 5px;
 }
 
-.contenedor-recetas_dulces {
-    display: flex;
-    padding: 10px;
-    height: 400px;
-    overflow: hidden;
+.articulo1 {
+    grid-area: articulo1;
 }
 
-.contenedor-recetas_dulces div {
-    margin: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-}
-.contenedor-recetas_dulces img {
-    height: 400px;
-    border-radius: 5px;
+.articulo2 {
+    grid-area: articulo2;
 }
 
-.contenedor-panes {
-    display: flex;
-    padding: 10px;
-    height: 400px;
-    overflow: hidden;
+.articulo3 {
+    grid-area: articulo3;
 }
 
-.contenedor-panes div {
-    margin: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-}
-.contenedor-panes img {
-    height: 400px;
-    border-radius: 5px;
+.articulo4 {
+    grid-area: articulo4;
 }
 
 /*----------Estilos del footer--------------*/
@@ -116,6 +100,7 @@ body {
     background-color: #77B0AA;
     color: #003C43;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-area: pie;
 }
 
 .logo_footer {
@@ -140,10 +125,36 @@ body {
     font-size: 25px;
 }
 
-/*----------Estilos del contenedor principal--------------*/
+/*----------Estilos del contenedor principal mobile--------------*/
 
 .contenedor {
     display: grid;
-    grid-template: repeat(5, auto) / 100%;
-
+    grid-template: repeat(7, auto) / 100%;
+    grid-template-areas: "encabezado"
+                         "menu"
+                         "articulo1"
+                         "articulo2"
+                         "pie";
 }
+
+/*----------Estilos del contenedor tamaño chico--------------*/
+
+@media (min-width: 720px) {
+    .contenedor {
+        display: grid;
+        grid-template: repeat (5, auto) / 50% 50%;
+        grid-template-areas: "encabezado encabezado"
+                             "menu menu"
+                             "articulo1 articulo2"
+                             "pie pie";
+    }
+}
+
+    .contenedor-recetas {
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .contenedor-recetas div p {
+        font-size: 15px;
+    }
