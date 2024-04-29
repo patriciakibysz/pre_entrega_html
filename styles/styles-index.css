@@ -1,6 +1,10 @@
 body {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #a6f8fa55, #a6f8fa );
 }
 
 .encabezado
@@ -14,13 +18,13 @@ body {
     } 
     
 .encabezado img {
-    width: 150px;
+    width: 100px;
     margin: 10px 10px;
     border-radius: 5px;
 }   
 
 .encabezado-centro h1{
-    font-size: 25px;
+    font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -45,6 +49,7 @@ body {
 .menu li a {
     color: #003C43;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .85rem;
     padding: 15px;
     text-decoration: none;
 }
@@ -59,8 +64,14 @@ body {
 .contenedor-recetas {
     display: flex;
     padding: 10px;
-    height: 300px;
+    height: 200px;
     overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.contenedor-recetas p {
+    margin-bottom: 4%;
+    overflow-y: auto;
 }
 
 .contenedor-recetas div {
@@ -69,7 +80,7 @@ body {
 }
 
 .contenedor-recetas img {
-    height: 250px;
+    height: 200px;
     border-radius: 5px;
 }
 
@@ -81,14 +92,6 @@ body {
     grid-area: articulo2;
 }
 
-.articulo3 {
-    grid-area: articulo3;
-}
-
-.articulo4 {
-    grid-area: articulo4;
-}
-
 /*----------Estilos del footer--------------*/
 
 .pie {
@@ -96,7 +99,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
-    margin: 20px 0px;
     background-color: #77B0AA;
     color: #003C43;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -107,6 +109,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: left;
+    font-size: 15px;
 }
 
 .pie img {
@@ -122,39 +125,102 @@ body {
 
 .iconos a {
     color: #003C43;
-    font-size: 25px;
+    font-size: 20px;
 }
 
-/*----------Estilos del contenedor principal mobile--------------*/
-
-.contenedor {
-    display: grid;
-    grid-template: repeat(7, auto) / 100%;
-    grid-template-areas: "encabezado"
-                         "menu"
-                         "articulo1"
-                         "articulo2"
-                         "pie";
-}
-
-/*----------Estilos del contenedor tamaño chico--------------*/
+/*----------Estilos del contenedor tamaño medio--------------*/
 
 @media (min-width: 720px) {
     .contenedor {
         display: grid;
-        grid-template: repeat (5, auto) / 50% 50%;
-        grid-template-areas: "encabezado encabezado"
-                             "menu menu"
-                             "articulo1 articulo2"
-                             "pie pie";
+        grid-template: repeat(4, auto) 50% 50%;
+        grid-template-areas:    "encabezado encabezado"
+                                "menu menu"
+                                "articulo1 articulo2"
+                                "pie pie";
+    } 
+
+    .encabezado img {
+        width: 150px;
+    }   
+    
+    .encabezado-centro h1{
+        font-size: 35px;
+    }
+
+    .menu li a {
+        font-size: 1.1rem;
+    }
+
+    .iconos {
+        column-gap: 13px;
+    }
+    
+    .iconos a {
+        font-size: 22px;
+    }
+
+    .contenedor-recetas {
+        height: 300px;
+    }
+    
+    .contenedor-recetas div {
+        margin: 10px;
+    }
+    
+    .contenedor-recetas img {
+        height: 250px;
+        max-width: 250px;
+    }
+
+    .contenedor-recetas h3 {
+        font-size: 16px;
     }
 }
 
-    .contenedor-recetas {
-        height: 400px;
-        overflow: hidden;
+/*----------Estilos del contenedor tamaño grande--------------*/
+
+@media (min-width: 1200px) {
+
+    .encabezado img {
+        margin-left: 30px;
+        margin-right: 30px;
+    }   
+    
+    .encabezado-centro h1{
+        font-size: 45px;
     }
 
-    .contenedor-recetas div p {
-        font-size: 15px;
+    .menu li a {
+        font-size: 1.1rem;
     }
+
+    .iconos {
+        column-gap: 20px;
+    }
+    
+    .iconos a {
+        font-size: 30px;
+    }
+
+    .contenedor-recetas {
+        height: 400px;
+    }
+    
+    .contenedor-recetas div {
+        margin: 10px;
+    }
+    
+    .contenedor-recetas img {
+        height: 300px;
+        max-width: 250px;
+    }
+
+    .contenedor-recetas h3 {
+        font-size: 20px;
+    }
+
+    .logo_footer {
+        font-size: 20px;
+    }
+}

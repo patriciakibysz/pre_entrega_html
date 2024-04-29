@@ -6,11 +6,11 @@
         <title>Página de recetas de cocina</title>
         <meta name="description" content="Recetas de cocina variadas y faciles">
         <link rel="stylesheet" href="./styles/styles-index.css">
-        <link rel="stylesheet" href="./styles/styles-recetas_saladas.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="./styles/styles-login.css">
     </head>
 
-    <body class="body">
+    <body>
         <div class="contenedor">
             <header class="encabezado">
                 <div class="encabezado-izq">
@@ -23,6 +23,7 @@
                     <img src="resources/images/logo_fresh_food_1.jpg" alt="Logo" width="200">
                 </div>
             </header>
+            
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -32,38 +33,36 @@
                 </ul>
             </nav>
 
-            <main class="main">
-                <div class="recetas-container">
-                    <div class="receta-portada">
-                        <img src="./resources/images/tarta_verduras.jpg" alt="Tarta de verduras">
-                        <h3 class="receta-detalles">
-                            Tarta de Verduras
-                        </h3>
-                        <div class="receta-resumen">
-                            <p>Si estás buscando un plato sencillo, que resulte delicioso y pueda comerse en cualquier ocasión, has llegado al sitio adecuado. Te traemos esta receta de tarta de verduras. ¡Seguro que te irá como anillo al dedo!</p>
-                        </div>
-                    </div>
+            <main>
+                <section>
+                    <form class="form">
+                        <h2 class="form_titulo">Inicia Sesión</h2>
+                        <p class="form_parrafo">¿No tienes cuenta aún? <a href="#" class="form_link">Entra aquí</a></p>
 
-                    <div class="receta-portada">
-                        <img src="./resources/images/guiso_lentejas.jpg" alt="Lentejas con Verduras">
-                        <h3 class="receta-detalles">
-                            Lentejas con Verduras
-                        </h3>
-                        <div class="receta-resumen">
-                            <p>Te contamos cómo prepar un guiso rico y cremoso, que no falla cuando queremos algo que nos caliente en invierno sin tener que cocinar demasiado y que además nos rinda como para alimentar varias bocas.</p>
+                        <div class="form_container">
+                            <div class="form_grupo"></div>
+                                <input type="text" id="nombre" class="form_input" placeholder=" ">
+                                <label for="nombre" class="form_label">Nombre</label>
+                                <span class="form_line"></span>
                         </div>
-                    </div>
 
-                    <div class="receta-portada">
-                        <img src="./resources/images/milanesa_pollo.jpg" alt="Milanesa de Pollo">
-                        <h3 class="receta-detalles">
-                            Milanesa de Pollo
-                        </h3>
-                        <div class="receta-resumen">
-                            <p>Las pechugas de pollo admiten todo tipo de salsas, guarniciones y maneras de cocinado: a la plancha, asadas, al horno… Si todavía no tienes claro cómo preparar las pechugas de pollo, ¡no puedes perderte esta receta para prepararlas como más te gusten!</p>
+                        <div class="form_container">
+                            <div class="form_grupo"></div>
+                                <input type="text" id="usuario" class="form_input" placeholder=" ">
+                                <label for="usuario" class="form_label">Ususario</label>
+                                <span class="form_line"></span>
                         </div>
-                    </div>
-                </div>
+
+                        <div class="form_container">
+                            <div class="form_grupo"></div>
+                                <input type="text" id="pass" class="form_input" placeholder=" ">
+                                <label for="pass" class="form_label">Contraseña</label>
+                                <span class="form_line"></span>
+                        </div>
+
+                        <input type="submit" class="form_submit" value="Ingresar">
+                    </form>
+                </section>
             </main>
 
             <footer class="pie">
@@ -86,12 +85,3 @@
         </div>     
     </body>
 </html>
-
-
-
-
-
-
-
-
-                
