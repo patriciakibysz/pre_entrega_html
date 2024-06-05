@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    min-width: 100vw;
+}
+
+main {
+    font-family: "Roboto", sans-serif;
+    background-color: #e5e5f7;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #a6f8fa55, #a6f8fa );
+    display: block;
+    grid-area: main;
+}
+
+.form {
+    align-self: center;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+    padding: 3em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0, 0, 0)/ 30%;
+    text-align: center;
+}
+
+.form_titulo {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.form_parrafo {
+    font-weight: 300;   
+}
+
+.form_link {
+    font-weight: 400;
+    color: black;
+}
+
+.form_container {
+    margin-top: 1em;
+    display: grid;
+    gap: .5em;
+}
+
+.form_grupo {
+    position: relative;
+}
+
+.form_input {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #4c4a4a7e;
+    font-family: "Roboto", sans-serif;
+}
+
+.form_submit {
+    margin-top: 3em;
+    gap: 2.5em;
+    background: #003C43;
+    color: #E3FEF7;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 7em;
+    border: none;
+    border-radius: .5em;
+}
+
+/*----------Estilos del contenedor tamaño medio--------------*/
+
+@media (min-width: 720px) {
+    .contenedor {
+        display: grid;
+        grid-template: repeat(4, auto) 50% 50%;
+        grid-template-areas:    "encabezado encabezado"
+                                "menu menu"
+                                "main main"
+                                "pie pie";
+    } 
+}

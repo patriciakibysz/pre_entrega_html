@@ -1,0 +1,70 @@
+body {
+    min-width: 100vw;
+}
+
+.main {
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #a6f8fa55, #a6f8fa );
+    grid-area: main;
+}
+
+.recetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recetas-container .receta-portada {
+    width: 200px;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color:  #E3FEF7;
+    color: black;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+.recetas-container .receta-portada img {
+    width: 100%;
+    height: 250px;
+}
+
+.recetas-container .receta-portada .receta-detalles {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 15px 15px 30px;
+    justify-content: space-between;
+}
+
+.recetas-container .receta-portada .receta-resumen {
+    color: black;
+    bottom: -100%;
+    padding: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 15px;
+    position: absolute;
+    background-color:  #E3FEF7;
+    box-sizing: border-box;
+    transition: bottom 0.4s ease-in-out;
+}
+
+.recetas-container .receta-portada:hover .receta-resumen {
+    bottom: 0;
+}
+
+/*----------Estilos del contenedor tamaño medio--------------*/
+
+@media (min-width: 720px) {
+    .contenedor {
+        display: grid;
+        grid-template: repeat(4, auto) 50% 50%;
+        grid-template-areas:    "encabezado encabezado"
+                                "menu menu"
+                                "main main"
+                                "pie pie";
+    } 
+}
